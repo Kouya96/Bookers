@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  get 'books/new'
-  get 'books/index'
-  get 'books/show'
-  get 'books/edit'
-  get 'homes/top'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-end
+ root to: "homes#top"  #ルートパスの設定(root)
+ resources :books  #ルーティングは「resources メソッド」を使用して実装
+ end
